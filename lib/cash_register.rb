@@ -10,11 +10,12 @@ class CashRegister
   def initialize(discount = 0)
     @total = 0
     @discount = discount
+
+    @items_list = []
+    @price_list = []
   end
 
   def add_item(item, price, num = 1)
-    @items_list = []
-    @price_list = []
 
     num.times {@items_list << item}
     @price_list << (price * num)
